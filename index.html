@@ -1,145 +1,323 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>前端知识储备</title>
-  </head>
- <link rel="stylesheet" href="./index.css">
-  <body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wait And Hope！</title>
+</head>
+<style>
+ @media screen and (max-width:600px) {
+  .box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border: 1px solid black;
+
+  }
+h5{
+  font-size: 16px;
+
+}
+  body {
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+  }
+
+  h3 {
+    text-align: center;
+    color: rgb(209, 0, 0);
+    background-color: rgb(255, 255, 255);
+    padding: 20px 0;
+  }
+
+  .top {
+    position: relative;
+    width: 100%;
+  
+  }
+
+  .content {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* 溢出需要可滚动 */
+    scrollbar-width: none;
+    /* Firefox隐藏滚动条 */
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+隐藏滚动条 */
+  }
+
+  ::-webkit-scrollbar {
+    width: 0;
+    /* Safari,Chrome 隐藏滚动条 */
+    height: 0;
+    /* Safari,Chrome 隐藏滚动条 */
+    display: none;
+    /* 移动端、pad 上Safari，Chrome，隐藏滚动条 */
+  }
+
+  .library {
+    display: flex;
+    justify-content: space-between;
+  /* 元素自动换行 */
+  flex-wrap: wrap;
+  }
+
+  .max {
+    border: 2px solid rgb(154, 154, 250);
+    padding: 10px;
+    margin: 7px;
+    border-radius: 5px;
+    min-width: 100px;
+    text-align: center;
+  }
+.max:hover{
+  border: 2px solid rgb(2, 2, 2);
+}
+  .list {
+    margin: 20px 10px;
+  }
+ }
+  @media screen and ( min-width:700px) {
+     .box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border: 1px solid black;
+    padding: 0 30px;
+
+  }
+
+  body {
+    margin: 0;
+    background-color: rgb(241, 241, 241);
+  }
+
+  h3 {
+    text-align: center;
+    color: rgb(209, 0, 0);
+    background-color: rgb(255, 255, 255);
+    padding: 20px 0;
+  }
+
+  .top {
+    position: relative;
+    width: 100%;
+  
+  }
+
+  .content {
+    border-radius: 0 0 20px 20px;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 41rem;
+    overflow: auto;
+    /* 溢出需要可滚动 */
+    scrollbar-width: none;
+    /* Firefox隐藏滚动条 */
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+隐藏滚动条 */
+  }
+
+  ::-webkit-scrollbar {
+    width: 0;
+    /* Safari,Chrome 隐藏滚动条 */
+    height: 0;
+    /* Safari,Chrome 隐藏滚动条 */
+    display: none;
+    /* 移动端、pad 上Safari，Chrome，隐藏滚动条 */
+  }
+
+  .library {
+    display: flex;
+    justify-content: space-between;
+  /* 元素自动换行 */
+  flex-wrap: wrap;
+  }
+
+  .max {
+    border: 2px solid rgb(154, 154, 250);
+    padding: 10px;
+    border-radius: 5px;
+    min-width: 100px;
+    text-align: center;
+  }
+.max:hover{
+  border: 2px solid rgb(2, 2, 2);
+}
+  .list {
+    margin: 50px 100px;
+  }
+  }
+</style>
+
+<body>
+  <div class="box">
     <div class="top">
-      <div class="backglound">
-        <div class="Change_Background" title="更换背景">
-          Change Background：
-        </div>
-
-        <div class="select">
-          <select name="Background_effect">
-            <option value="Cherryblossoms">Cherry blossoms</option>
-            <option value="snowflake">snowflake</option>
-          </select>
-        </div>
-      </div>
-
-      <h3 class="text">Wait And Hope</h3>
-      <!-- 时间 -->
-      <div
-        id="time"
-        title="盛年不重来，一日难再晨；
-    及时当勉励，岁月不待人。"
-      ></div>
+      <h3>Welcome Mr. zhang's front-end knowledge base ！</h3>
     </div>
-    <script type="text/javascript">
-      function time() {
-        var vWeek, vWeek_s, vDay;
-        vWeek = [
-          "星期日",
-          "星期一",
-          "星期二",
-          "星期三",
-          "星期四",
-          "星期五",
-          "星期六",
-        ];
-        var date = new Date();
-        year = date.getFullYear();
-        month = date.getMonth() + 1;
-        day = date.getDate();
-        hours = date.getHours();
-        minutes = date.getMinutes();
-        seconds = date.getSeconds();
-        vWeek_s = date.getDay();
-        document.getElementById("time").innerHTML =
-          year +
-          "年" +
-          month +
-          "月" +
-          day +
-          "日" +
-          "\t" +
-          hours +
-          ":" +
-          minutes +
-          ":" +
-          seconds +
-          "\t" +
-          vWeek[vWeek_s];
-      }
-      setInterval("time()", 1000);
-    </script>
+    <div class="content">
+      <div class="list">
+        <h5>前端三件套：</h5>
+        <div class="library">
+          <div class="max">HTML5</div>
+          <div class="max">CSS3</div>
+          <div class="max">JavaScript</div>
+        </div>
 
-    <!-- 内容盒子 -->
-    <div class="box">
-      <div class="three">
-        <div class="name">Front three piece set：</div>
-        <div class="Basics">
-          <div>HTML</div>
-          <div>CSS</div>
-          <div> <a href="./JavaScript/index.html">JavaScript</a>  </div>
-        </div>
       </div>
-      <div class="frame">
-        <div class="name">Frame:</div>
-        <div class="Basics">
-          <div>Vue</div>
-          <div>React</div>
+      <div class="list">
+        <h5>前端三件套：</h5>
+        <div class="library">
+          <div class="max">HTML5</div>
+          <div class="max">CSS3</div>
+          <div class="max">JavaScript</div>
         </div>
+
       </div>
-      <div class="frame">
-        <div class="name">Library：</div>
-        <!-- ui组件库 -->
-        <h5>Ui component library：</h5>
-        <div class="Uicomponentlibrary">
-          <div>Element</div>
-          <div>View</div>
-          <div>Vant</div>
+      <div class="list">
+        <h5>前端三件套：</h5>
+        <div class="library">
+          <div class="max">HTML5</div>
+          <div class="max">CSS3</div>
+          <div class="max">JavaScript</div>
         </div>
-        <!-- 技能库 -->
-        <h5>Skills bank：</h5>
-        <div class="Uicomponentlibrary">
-          <div>JQuery</div>
-          <div>ECharts</div>
-          <div>Yarn</div>
-        </div>
-        <!-- 特效库 -->
-        <h5>Special effects library：</h5>
-        <div class="Uicomponentlibrary">
-          <div title="背景颜色挑选">
-            <a href="https://webgradients.com/"> Webgradients</a>
-          </div>
-        </div>
-        <!-- 工具库 -->
-        <h5>Tool library：</h5>
-        <div class="Uicomponentlibrary">
-          <div title="草料二维码生成"><a href="https://cli.im/"> Cli</a></div>
-          <div title="向页面输出代码">
-            <a href="https://highlightjs.org/">Highlightjs</a>
-          </div>
-          <div title="熊猫压缩">
-            <a href="https://tinypng.com/"> Tinypng</a>
-          </div>
-          <div title="时间差计算">
-            <a href="https://www.beijing-time.org/riqi.htm"> Beijing-time</a>
-          </div>
-          <div title="进制在线转换">
-            <a href="https://tool.oschina.net/hexconvert/">Hexconvert</a>
-          </div>
-          <div title="图像转换">
-            <a href="https://www.aconvert.com/cn/icon/png-to-ico/">
-              Png-to-ico</a
-            >
-          </div>
-        </div>
+
       </div>
-      <!-- 方法 -->
-      <div class="frame">
-        <div class="name">Method:</div>
-        <div class="Basics"></div>
+      <div class="list">
+        <h5>前端三件套：</h5>
+        <div class="library">
+          <div class="max">HTML5</div>
+          <div class="max">CSS3</div>
+          <div class="max">JavaScript</div>
+        </div>
+
       </div>
-      <!-- 面试题 -->
-      <div class="frame">
-        <div class="name">Interview questions:</div>
-        <div class="Basics"></div>
+      <div class="list">
+        <h5>前端三件套：</h5>
+        <div class="library">
+          <div class="max">HTML5</div>
+          <div class="max">CSS3</div>
+          <div class="max">JavaScript</div>
+        </div>
+
+      </div>
+      <div class="list">
+        <h5>前端三件套：</h5>
+        <div class="library">
+          <div class="max">HTML5</div>
+          <div class="max">CSS3</div>
+          <div class="max">JavaScript</div>
+        </div>
+
+      </div>
+      <div class="list">
+        <h5>前端三件套：</h5>
+        <div class="library">
+          <div class="max">HTML5</div>
+          <div class="max">CSS3</div>
+          <div class="max">JavaScript</div>
+        </div>
+
+      </div>
+      <div class="list">
+        <h5>前端三件套：</h5>
+        <div class="library">
+          <div class="max">HTML5</div>
+          <div class="max">CSS3</div>
+          <div class="max">JavaScript</div>
+        </div>
+
+      </div>
+      <div class="list">
+        <h5>前端三件套：</h5>
+        <div class="library">
+          <div class="max">HTML5</div>
+          <div class="max">CSS3</div>
+          <div class="max">JavaScript</div>
+        </div>
+
+      </div>
+      <div class="list">
+        <h5>前端三件套：</h5>
+        <div class="library">
+          <div class="max">HTML5</div>
+          <div class="max">CSS3</div>
+          <div class="max">JavaScript</div>
+        </div>
+
+      </div>
+      <div class="list">
+        <h5>前端三件套：</h5>
+        <div class="library">
+          <div class="max">HTML5</div>
+          <div class="max">CSS3</div>
+          <div class="max">JavaScript</div>
+        </div>
+
+      </div>
+      <div class="list">
+        <h5>前端三件套：</h5>
+        <div class="library">
+          <div class="max">HTML5</div>
+          <div class="max">CSS3</div>
+          <div class="max">JavaScript</div>
+        </div>
+
+      </div>
+      <div class="list">
+        <h5>前端三件套：</h5>
+        <div class="library">
+          <div class="max">HTML5</div>
+          <div class="max">CSS3</div>
+          <div class="max">JavaScript</div>
+        </div>
+
+      </div>
+      <div class="list">
+        <h5>前端三件套：</h5>
+        <div class="library">
+          <div class="max">HTML5</div>
+          <div class="max">CSS3</div>
+          <div class="max">JavaScript</div>
+        </div>
+
+      </div>
+      <div class="list">
+        <h5>前端三件套：</h5>
+        <div class="library">
+          <div class="max">HTML5</div>
+          <div class="max">CSS3</div>
+          <div class="max">JavaScript</div>
+        </div>
+
+      </div>
+      <div class="list">
+        <h5>前端三件套：</h5>
+        <div class="library">
+          <div class="max">HTML5</div>
+          <div class="max">CSS3</div>
+          <div class="max">JavaScript</div>
+        </div>
+
+      </div>
+      <div class="list">
+        <h5>前端三件套：</h5>
+        <div class="library">
+          <div class="max">HTML5</div>
+          <div class="max">CSS3</div>
+          <div class="max">JavaScript</div>
+        </div>
+
       </div>
     </div>
-  </body>
+</body>
+
 </html>
