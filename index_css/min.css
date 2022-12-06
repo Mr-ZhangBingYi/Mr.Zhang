@@ -1,0 +1,78 @@
+@media screen and ( min-width:700px) {
+    .box {
+   position: fixed;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   border: 1px solid black;
+   padding: 0 30px;
+
+ }
+
+ body {
+   margin: 0;
+   background-color: rgb(241, 241, 241);
+ }
+
+ h3 {
+   text-align: center;
+   color: rgb(209, 0, 0);
+   background-color: rgb(255, 255, 255);
+   padding: 20px 0;
+ }
+
+ .top {
+   position: relative;
+   width: 100%;
+ 
+ }
+h5{
+ font-size: 17px;
+}
+ .content {
+   border: 1px solid rgb(216, 216, 216);
+
+   border-radius:  20px;
+   background-color: rgb(255, 255, 255);
+   width: 100%;
+   height: 41rem;
+   overflow: auto;
+   /* 溢出需要可滚动 */
+   scrollbar-width: none;
+   /* Firefox隐藏滚动条 */
+   -ms-overflow-style: none;
+   /* Internet Explorer 10+隐藏滚动条 */
+ }
+
+ ::-webkit-scrollbar {
+   width: 0;
+   /* Safari,Chrome 隐藏滚动条 */
+   height: 0;
+   /* Safari,Chrome 隐藏滚动条 */
+   display: none;
+   /* 移动端、pad 上Safari，Chrome，隐藏滚动条 */
+ }
+
+ .library {
+   display: flex;
+   justify-content: space-between;
+ /* 元素自动换行 */
+ flex-wrap: wrap;
+ }
+
+ .max {
+   border: 2px solid rgb(154, 154, 250);
+   padding: 10px;
+   border-radius: 5px;
+   min-width: 100px;
+   text-align: center;
+   margin: 10px  5px;
+ }
+.max:hover{
+ border: 2px solid rgb(255, 18, 97);
+}
+ .list {
+   margin: 50px 100px;
+ }
+ }
