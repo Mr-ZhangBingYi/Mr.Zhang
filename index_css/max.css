@@ -1,20 +1,10 @@
 @media screen and (max-width:700px) {
-    .box {
-      position: fixed;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-  
-    }
+
   h5{
     font-size: 16px;
   
   }
-    body {
-      margin: 0;
-      background-color: rgb(240, 240, 240);
-    }
+
   
     h3 {
       text-align: center;
@@ -24,11 +14,7 @@
       margin: 0 0 5px 0;
     }
   
-    .top {
-      position: relative;
-      width: 100%;
-    
-    }
+   
   
     .content {
       background-color: rgb(255, 255, 255);
@@ -51,12 +37,7 @@
       /* 移动端、pad 上Safari，Chrome，隐藏滚动条 */
     }
   
-    .library {
-      display: flex;
-      justify-content: space-between;
-    /* 元素自动换行 */
-    flex-wrap: wrap;
-    }
+
   
     .max {
       border: 2px solid rgb(154, 154, 250);
