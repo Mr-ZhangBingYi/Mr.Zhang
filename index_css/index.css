@@ -1,3 +1,25 @@
+.laber {
+  display: flex;
+  flex-wrap: wrap;
+}
+.min {
+  border: 2px solid rgb(154, 154, 250);
+  padding: 10px;
+  border-radius: 5px;
+  min-width: 80px;
+  text-align: center;
+  margin: 10px 7px 10px 0;
 
-.Library{
+  font-size: 13px;
+}
+.min:hover {
+  border: 2px solid rgb(255, 18, 97);
+}
+.one {
+  margin: 10px 20px;
+}
+h6 {
+  font-size: 13px;
+  color: rgb(255, 123, 0);
+  margin: 0;
 }
